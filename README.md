@@ -184,7 +184,7 @@ weighted avg       0.98      0.98      0.98      1275
 ## 7. Evaluation of classifiers
 We can see now summarized all our results and scores for each classifier . We used confusion matrix to measure all classifiers .Furthermore, learning curves (ROC) and feature importance was implemented in order to find the most efficient classifier 
 
-Confusion Matrix for all classifiers 
+### A. Confusion Matrix for all classifiers 
 ```ruby
 #Making confusion matrix 
 forest_cm = metrics.confusion_matrix(fpred,y_test)
@@ -213,10 +213,21 @@ Confusion Matrix of SVM:
  [   0    4]]
  ```
  
- ROC curves 
+ ### B. ROC curves 
+ 
  ![ROC](https://user-images.githubusercontent.com/81081046/113521166-5d722600-95a0-11eb-964b-520575dff57e.png)
 
 Learning curves </br> </br> 
 
+ ### B. Feature Importance
+Feature importance was implemented in Random Forest clasiffier aiming to see the most important feature. 
 
+![feature importance](https://user-images.githubusercontent.com/81081046/113521308-4ed83e80-95a1-11eb-9457-7d659b8a3e03.png)
 
+SUMMARAZATION RESULTS </br>
+| **Classifiers** | | **Accuracy(%)** |
+| :--- | :--- | :--- | :--- | :--- |
+| **SVM** | 86.7 |
+| **Random Forest** | 97.9 |
+| **Gradient Boosting** | 97.3 |
+| **Decision Tree** | 95.0 |
