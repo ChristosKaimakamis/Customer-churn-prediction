@@ -224,7 +224,9 @@ Feature importance was implemented in Random Forest clasiffier aiming to see the
 
 ![feature importance](https://user-images.githubusercontent.com/81081046/113521308-4ed83e80-95a1-11eb-9457-7d659b8a3e03.png)
 
-SUMMARAZATION RESULTS </br>
+
+ ### B. Results 
+ 
 | **Classifiers** | **Accuracy(%)** |
 | :--- | :--- |
 | **SVM** | 86.7 |
