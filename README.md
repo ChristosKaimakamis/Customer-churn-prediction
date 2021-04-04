@@ -49,6 +49,11 @@ Estimate the churn percentage:
 
 ![imbalance](https://user-images.githubusercontent.com/81081046/113518796-2b0cfc80-9591-11eb-8e55-4db140420963.png)</br>
 
+### Churn By Customers with Voice mail plan & International plan
+Estimate churn customers with Voice mail plan & International plan 
+
+!(https://user-images.githubusercontent.com/81081046/113519290-ecc50c80-9593-11eb-8293-beb96907776d.png)
+
 
 
 
