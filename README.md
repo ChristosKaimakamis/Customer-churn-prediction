@@ -179,3 +179,44 @@ Accuracy of the RFC on test set: 0.979
    macro avg       0.99      0.92      0.95      1275
 weighted avg       0.98      0.98      0.98      1275
 ```
+
+
+## 7. Evaluation of classifiers
+We can see now summarized all our results and scores for each classifier . We used confusion matrix to measure all classifiers .Furthermore, learning curves (ROC) and feature importance was implemented in order to find the most efficient classifier 
+
+Confusion Matrix for all classifiers 
+```ruby
+#Making confusion matrix 
+forest_cm = metrics.confusion_matrix(fpred,y_test)
+print("Confusion Matrix of random forest:\n",forest_cm)
+tree_cm = metrics.confusion_matrix(tree_pred,y_test)
+print("Confusion Matrix of Desicion Tree:\n",tree_cm)
+gradient_boooster_cm = metrics.confusion_matrix(gb_pred,y_test)
+print("Confusion Matrix of Gradient booster :\n",gradient_boooster_cm)
+SVM_cm = metrics.confusion_matrix(svm_pred,y_test)
+print("Confusion Matrix of SVM:\n",SVM_cm)
+```
+
+Results 
+```ruby
+Confusion Matrix of random forest:
+ [[1102   27]
+ [   0  146]]
+Confusion Matrix of Desicion Tree:
+ [[1102   64]
+ [   0  109]]
+Confusion Matrix of Gradient booster :
+ [[1102   34]
+ [   0  139]]
+Confusion Matrix of SVM:
+ [[1102  169]
+ [   0    4]]
+ ```
+ 
+ ROC curves 
+ ![ROC](https://user-images.githubusercontent.com/81081046/113521166-5d722600-95a0-11eb-964b-520575dff57e.png)
+
+Learning curves </br> </br> 
+
+
+
