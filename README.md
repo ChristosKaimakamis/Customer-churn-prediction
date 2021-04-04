@@ -3,11 +3,23 @@
 
 The project is based on the Kaggle competition "Customer Churn Prediction 2020", as you can find [here](https://www.kaggle.com/c/customer-churn-prediction-2020/overview/description). </br> The evaluation is based on the test Accuracy criterion: (Accuracy = Number of correct predictions/Number of total test samples). </br> </br>
 
-The following approach managed to achieve a score of 0.99111 on Public Leaderboard and 0.97333 on Private.
+The following approach managed to achieve a score of 0.99111 on Public Leaderboard and 0.979 on Private.
 
 ## Table of Contents
 * [1. Introduction](#1-introduction)
-* [2. Data](#2-data explanation)
+* [2. Data](#2-data)
+* [3. Exploratory Data Analysis](#3-exploratory-data-analysis)
+  * [Cheching for imbalance](#cheching-for-imbalance)
+  * [Churn By Customers with Voice mail plan & International plan](#Churn-By-Customers-with-Voice-mail-plan-&-International-plan)
+  * [Plot the distribution of the numerical features ](#Plot-the-distribution-of-the-numerical-features)
+  * [Correlation Matrix](#Correlation-Matrix)
+* [4. Feature Engineering](#4-feature-engineering)
+  * [A. Transform labels to numerical values ](#a-Transform-labels-to-numerical-values )
+  * [B. Merge Features](#b-Merge-Features)
+  * [C. Dummies for categorical features](#c-dummies-for-categorical-features)
+* [5. Machine Learning Classifiers](#5-machine-learning-classifiers)
+* [6. Train our Classifiers](#6-Train-our-Classifiers)
+* [7. Evaluation of classifiers](#7-evaluation-of-classifiers)
 
 
 
@@ -54,7 +66,7 @@ Estimate churn customers with Voice mail plan & International plan
 
 ![Group by churn](https://user-images.githubusercontent.com/81081046/113519341-39104c80-9594-11eb-9c5f-5d4257fe9bf5.png)
 
-### plot the distribution of the numerical features 
+### Plot the distribution of the numerical features 
 Churn distribution plots 
 
 ![total calls](https://user-images.githubusercontent.com/81081046/113519463-0ca90000-9595-11eb-98f3-952bff38cfaf.png)
