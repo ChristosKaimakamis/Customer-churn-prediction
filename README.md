@@ -46,8 +46,9 @@ The most significant part of our research is the EDA sector. Here you can see th
 
 ### Checking for imbalance
 Estimate the churn percentage: 
+
 ![imbalance](https://user-images.githubusercontent.com/81081046/113518796-2b0cfc80-9591-11eb-8e55-4db140420963.png)</br>
-imbalance </br>
+
 
 
 
