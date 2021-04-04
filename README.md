@@ -71,10 +71,24 @@ Plot total mins distribution </br> </br>
 
 ![correlation matrix](https://user-images.githubusercontent.com/81081046/113519955-69f28080-9598-11eb-935f-325cda968ede.png)
 
+## 4. Feature Engineering
+The most important phase of our project aiming to achieve the best accuracy score, is feature engineering. We used label encoding ni order to convert labels into numerical values.We also merged Features and used correlation matrix to drop unwanted columns (see above our plot). Finally significant procedure that contributes to obtaining superior results is that of the dummy’s method to create dummy variables. 
 
+### A. Transform labels to numerical values 
 
+```ruby
+label_encoder = preprocessing.LabelEncoder()
 
+train_df['international_plan'] = label_encoder.fit_transform(train_df['international_plan'])
+train_df['voice_mail_plan'] = label_encoder.fit_transform(train_df['voice_mail_plan'])
+train_df['churn'] = label_encoder.fit_transform(train_df['churn'])
 
+### B. Merge Features
 
+#merge all matching features 
+train_df['total_minutes']=train_df.total_day_minutes + train_df.total_eve_minutes + train_df.total_night_minutes + train_df.total_intl_minutes
+train_df['total_calls']=train_df.total_day_calls + train_df.total_eve_calls + train_df.total_night_calls + train_df.total_intl_calls
+train_df['total_charge']=train_df.total_day_charge + train_df.total_eve_charge + train_df.total_night_charge + train_df.total_intl_charge
+train_df['total_hours'] = train_df.total_minutes/60
 
 
