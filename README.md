@@ -226,7 +226,7 @@ Feature importance was implemented in Random Forest clasiffier aiming to see the
 
 SUMMARAZATION RESULTS </br>
 | **Classifiers** | | **Accuracy(%)** |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | 
 | **SVM** | 86.7 |
 | **Random Forest** | 97.9 |
 | **Gradient Boosting** | 97.3 |
