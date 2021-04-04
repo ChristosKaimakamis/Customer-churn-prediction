@@ -166,3 +166,16 @@ fpred=forestOpt.predict(X_test)
 print(classification_report(y_test, fpred))
 ```
 
+Our Results 
+```ruby
+
+Accuracy of the GBM on test set: 0.979
+              precision    recall  f1-score   support
+
+           0       0.98      1.00      0.99      1102
+           1       1.00      0.84      0.92       173
+
+    accuracy                           0.98      1275
+   macro avg       0.99      0.92      0.95      1275
+weighted avg       0.98      0.98      0.98      1275
+```
