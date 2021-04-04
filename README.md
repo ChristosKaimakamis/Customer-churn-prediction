@@ -146,7 +146,7 @@ A Cross Validation using stratified kfold with 10 splits was implemented in orde
 - Gradient Boosting Machine
 - Decision Tree
 
-## . Train our Classifiers 
+## 6. Train our Classifiers 
 We trained our classifiers using also Hyperparameter tuning aiming to achive the best accuracy score .
 
 Here we used Hyperparameter tuning trying to find the most efficient combination to achive the best score.
