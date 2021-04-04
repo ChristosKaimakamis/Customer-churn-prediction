@@ -40,3 +40,14 @@ ATTRIBUTES OF THE TRAINING SET  </br>
 | 18 | total_intl_charge | numerical | Total charge of international calls. |
 | 19 | number_customer_service_calls | numerical | Number of calls to customer service. |
 | 20 | churn | boolean | Customer churn - target variable. |
+
+## 3. Exploratory Data Analysis
+The most significant part of our research is the EDA sector. Here you can see the graphs we generated. 
+
+### Cheching for imbalance
+Estimate the churn percentage: 
+
+
+
+
+
