@@ -86,10 +86,44 @@ train_df['churn'] = label_encoder.fit_transform(train_df['churn'])
 
 ### B. Merge Features
 
+```ruby
+
 #merge all matching features 
+
 train_df['total_minutes']=train_df.total_day_minutes + train_df.total_eve_minutes + train_df.total_night_minutes + train_df.total_intl_minutes
 train_df['total_calls']=train_df.total_day_calls + train_df.total_eve_calls + train_df.total_night_calls + train_df.total_intl_calls
 train_df['total_charge']=train_df.total_day_charge + train_df.total_eve_charge + train_df.total_night_charge + train_df.total_intl_charge
 train_df['total_hours'] = train_df.total_minutes/60
+```
 
+### C. Dummies for categorical features
+First we created to groups to based on the proportion of the churners and convert state and are code into dummies in order to enhabce our classifiers result.
+
+```ruby
+
+# Create two bins for State based on the proportion of churners
+dn = train_df.groupby(by='state').agg(lambda x: x.sum()/ x.count()).reset_index()
+np.mean(dn.churn.values)
+group_A = (dn.loc[dn.churn>0.14]).state.values
+group_B = (dn.loc[dn.churn<=0.14]).state.values
+
+
+# Convert State and Area_code into dummies 
+def preprocess(df):
+    df_dummies = pd.get_dummies(df.area_code) 
+    df=pd.concat([df_dummies,df],axis=1)
+    
+    for i in group_A:
+        for j in group_B:
+            df.state.replace((i,j), ('group_A','group_B'), inplace=True)
+    
+    df_dummies2 = pd.get_dummies(df.state)
+    df=pd.concat([df_dummies2,df],axis=1)
+    
+    df.drop(['state','area_code'],inplace=True,axis=1)
+    return df
+	
+
+train_df=preprocess(train_df)
+```
 
