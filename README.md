@@ -52,7 +52,7 @@ Estimate the churn percentage:
 ### Churn By Customers with Voice mail plan & International plan
 Estimate churn customers with Voice mail plan & International plan 
 
-!(https://user-images.githubusercontent.com/81081046/113519290-ecc50c80-9593-11eb-8293-beb96907776d.png)
+![Group by churn](https://user-images.githubusercontent.com/81081046/113519341-39104c80-9594-11eb-9c5f-5d4257fe9bf5.png)
 
 
 
