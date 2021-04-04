@@ -58,9 +58,11 @@ Estimate churn customers with Voice mail plan & International plan
 Churn distribution plots 
 
 ![total calls](https://user-images.githubusercontent.com/81081046/113519463-0ca90000-9595-11eb-98f3-952bff38cfaf.png)
+Plot total call distribution </br> </br> 
 ![total charge](https://user-images.githubusercontent.com/81081046/113519474-28aca180-9595-11eb-9118-beeb7ed6981c.png)
-![Histogram of account_length](https://user-images.githubusercontent.com/81081046/113519477-2fd3af80-9595-11eb-8830-eed07f051b3e.png)
-
+Plot total charge distribution </br> </br> 
+![total mins](https://user-images.githubusercontent.com/81081046/113519477-2fd3af80-9595-11eb-8830-eed07f051b3e.png)
+Plot total mins distribution </br> </br> 
 
 
 
