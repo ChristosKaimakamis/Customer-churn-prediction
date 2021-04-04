@@ -82,6 +82,7 @@ label_encoder = preprocessing.LabelEncoder()
 train_df['international_plan'] = label_encoder.fit_transform(train_df['international_plan'])
 train_df['voice_mail_plan'] = label_encoder.fit_transform(train_df['voice_mail_plan'])
 train_df['churn'] = label_encoder.fit_transform(train_df['churn'])
+```
 
 ### B. Merge Features
 
