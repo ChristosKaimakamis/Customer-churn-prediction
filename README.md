@@ -126,4 +126,43 @@ def preprocess(df):
 
 train_df=preprocess(train_df)
 ```
+## 5. Machine Learning Classifiers 
+A Cross Validation using stratified kfold with 10 splits was implemented in order to train the following classifiers: </br>
+
+- Support Vector Machines
+- Random Forest
+- Gradient Boosting Machine
+- Decision Tree
+
+## . Train our Classifiers 
+We trained our classifiers using also Hyperparameter tuning aiming to achive the best accuracy score .
+
+Here we used Hyperparameter tuning trying to find the most efficient combination to achive the best score.
+```ruby
+
+#Set parameters to choose Random Forest
+n_estimators = [100, 300, 500, 800, 1200]
+max_depth = [5, 8, 15, 25, 30]
+min_samples_split = [2, 5, 10, 15, 100]
+min_samples_leaf = [1, 2, 5, 10] 
+
+hyperF = dict(n_estimators = n_estimators, max_depth = max_depth,  
+              min_samples_split = min_samples_split, 
+             min_samples_leaf = min_samples_leaf)
+# Create a based model
+forest = RandomForestClassifier()
+gridF  = GridSearchCV(estimator = forest, param_grid = hyperF, cv = 3, n_jobs = -1, verbose = 2)
+bestF = gridF.fit(X_train, y_train)
+print(bestF.best_params_)
+```
+
+Now we trained the optimized model 
+```ruby
+#Optimized Random Forest Classifier
+forestOpt = RandomForestClassifier(random_state = 1, max_depth = 25,n_estimators = 800, min_samples_split = 2, min_samples_leaf = 2)    
+forestOpt.fit(X_train,y_train)
+print('Accuracy of the GBM on test set: {:.3f}'.format(forestOpt.score(X_test, y_test)))
+fpred=forestOpt.predict(X_test)
+print(classification_report(y_test, fpred))
+```
 
