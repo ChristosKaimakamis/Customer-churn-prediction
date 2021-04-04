@@ -161,7 +161,7 @@ Now we trained the optimized model
 #Optimized Random Forest Classifier
 forestOpt = RandomForestClassifier(random_state = 1, max_depth = 25,n_estimators = 800, min_samples_split = 2, min_samples_leaf = 2)    
 forestOpt.fit(X_train,y_train)
-print('Accuracy of the GBM on test set: {:.3f}'.format(forestOpt.score(X_test, y_test)))
+print('Accuracy of the RFC on test set: {:.3f}'.format(forestOpt.score(X_test, y_test)))
 fpred=forestOpt.predict(X_test)
 print(classification_report(y_test, fpred))
 ```
@@ -169,7 +169,7 @@ print(classification_report(y_test, fpred))
 Our Results 
 ```ruby
 
-Accuracy of the GBM on test set: 0.979
+Accuracy of the RFC on test set: 0.979
               precision    recall  f1-score   support
 
            0       0.98      1.00      0.99      1102
